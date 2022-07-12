@@ -4,7 +4,7 @@ export const MysqlDataSource = new DataSource({
     host: "localhost",
     port: 3306,
     username: "root",
-    password: "xxxxx",
+    password: "omsai@123",
     database: "banking",
     entities: ["./src/models/*.ts"],
     migrationsTableName: "orm_migration",
