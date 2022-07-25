@@ -1,14 +1,11 @@
 import React from 'react'
-import {Container,Row,Col} from 'react-bootstrap';
-
-function Content({children}) {
+function Content({ children }) {
   return (
-          <section id="hero" className='section-bg'>
-          <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
-          {children}
-          </div>
-        </section>
-      
+    <section id="hero" >
+      <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
+        {children}
+      </div>
+    </section>
   )
 }
 

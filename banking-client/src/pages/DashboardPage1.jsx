@@ -25,14 +25,15 @@ const AccountsPage = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-        <Container className='main-container'>
-          <div className="section-title">
-            <h2>Dashboard</h2>
-            <h3>Account Holder List</h3>
-          </div>
-          <AccountDataTable accounts={data.accountUser}></AccountDataTable>
-        </Container>
-      
+    <section id="hero" className='section-bg'>
+    <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
+      <div className="section-title">
+          <h2>Account User List</h2>
+        </div>
+        <AccountDataTable accounts={data.accountUser}></AccountDataTable>
+        </div>
+      </section>
+       
   )
 }
 export default AccountsPage;

@@ -1,8 +1,14 @@
-#hero {
-    background-color: aliceblue;
-
+.main-container{
+    background-color: #ffffff;
+    width: 90%;
+    height: 50%;
+    border-radius: 15px;
 }
-a {
-  
-    text-decoration: none;
-  }
+h3{
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    color: #5c8eb0;
+}
