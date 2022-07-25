@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-
+import BankLogo from './../assets/images/banklogo.png';
 import { NavLink } from "react-router-dom";
 import NavigationBar from "../components/shared/NavigationBar";
 function Header() {
@@ -8,7 +8,10 @@ function Header() {
         <header id="header" className="fixed-top ">
             <Container className="d-flex align-items-center justify-content-between">
                 <h1 className="logo">
-                    <a href="/">Mock Banking</a></h1>
+                   
+                <a href="/" className="logo"> <img className="img-fluid" src={BankLogo}/> </a>
+                   
+                    <a href="/"class="logo">Mock Banking</a></h1>
                 <nav id="navbar" className="navbar">
                     <ul>
                         <li><a className="nav-link scrollto" href="/dashboard">Dashboard</a></li>
