@@ -1,12 +1,12 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-import {Container,Row,Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import AccountDataTable from '../components/accounts/AccountDataTable';
 import AccountsList from '../components/accounts/AccountsList'
 import { useQuery, gql } from '@apollo/client';
 
 
-const AccountsPage = () =>  {
+const AccountsPage = () => {
   const GET_ACCOUNT_USER = gql`
   query Query {
     accountUser {
@@ -17,19 +17,23 @@ const AccountsPage = () =>  {
   }
 `;
   const { loading, error, data } = useQuery(GET_ACCOUNT_USER);
-  console.log('loading',loading);
-  console.log('data.accountUser',data);
-  console.log('erroe',error);
+  console.log('loading', loading);
+  console.log('data.accountUser', data);
+  console.log('erroe', error);
 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-  return(<Container>
-          <Row>
-            <Col> 
-              <AccountDataTable accounts={data.accountUser}></AccountDataTable>
-            </Col>
-          </Row>
-        </Container>
-        )}
+  return (<Container>
+    <Row>
+      <Col>
+        <div className="section-title">
+          <h2>Account User List</h2>
+        </div>
+        <AccountDataTable accounts={data.accountUser}></AccountDataTable>
+      </Col>
+    </Row>
+  </Container>
+  )
+}
 export default AccountsPage;

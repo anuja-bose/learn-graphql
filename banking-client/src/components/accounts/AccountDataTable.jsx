@@ -17,7 +17,6 @@ const AccountDataTable = ({ accounts }) => {
 
     return (
         <DataTable
-        title = "Accounts users"
             columns={columns}
             data={accounts}
             pagination
