@@ -1,3 +1,4 @@
+require('dotenv').config();
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
@@ -7,8 +8,7 @@ import { MysqlDataSource } from "./core/MySQLDataSource";
 async function main() {
     // Future enhancement
     // Database connection will be placed in the seperate file
-    
-
+   
     MysqlDataSource.initialize()
         .then(() => {
             console.log("Mysql DataSource has been initialized!")

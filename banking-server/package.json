@@ -7,13 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -w src --ext ts --exec ts-node src/index.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "typeorm-create" : "typeorm migration:create"
+    "typeorm-create": "typeorm migration:create"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.9.0",
+    "dotenv": "^16.0.1",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.8",
