@@ -5,6 +5,7 @@ import Footer from "./layout/Footer";
 import { Routes, Route } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
 import { AppProvider } from "./context/AppContext";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Header />
                 <Content>
                     <Routes>
-                        <Route exact path="/" element={<DashboardPage />} />
+                        <Route exact path="/" element={<LandingPage />} />
                         <Route path="/dashboard" element={<DashboardPage />} />
                         
                     </Routes>

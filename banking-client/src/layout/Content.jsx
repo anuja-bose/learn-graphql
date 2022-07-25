@@ -3,13 +3,12 @@ import {Container,Row,Col} from 'react-bootstrap';
 
 function Content({children}) {
   return (
-    <Container className='ptb-20'>
-        <Row>
-          <Col>
+          <section id="hero">
+          <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
           {children}
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </section>
+      
   )
 }
 
