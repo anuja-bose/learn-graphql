@@ -19,7 +19,7 @@ const AccountsPage = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-        <Container className='main-container'>
+        <Container className='sub-container'>
           <div className="section-title">
             <h2>Dashboard</h2>
             <h3>Account Holder List</h3>
