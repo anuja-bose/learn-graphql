@@ -28,3 +28,38 @@
   height: 100%;
   overflow: scroll;
 }
+
+
+.form input,
+.form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #ff4a17;
+}
+
+.form input {
+  padding: 10px 15px;
+}
+
+.form textarea {
+  padding: 12px 15px;
+}
+
+.form button[type=submit] {
+  background: #ff4a17;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.form button[type=submit]:hover {
+  background: #ff5e31;
+}
