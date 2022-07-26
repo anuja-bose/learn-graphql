@@ -1,6 +1,5 @@
 import { Resolver, Query, Mutation, Arg } from "type-graphql";
-import { CreateAccountUserInput } from "../inputs/AccountUser/CreateAccountUserInput";
-import { UpdateAccountUserInput } from "../inputs/AccountUser/UpdateAccountUserInput";
+import { AccountUserInput } from "../inputs/AccountUser/AccountUserInput";
 
 import { AccountUser } from "../models/AccountUser";
 
@@ -17,7 +16,7 @@ export class AccountUserResolver {
     }
    
     @Mutation(() => AccountUser)
-    async createAccountUser(@Arg("data") data: CreateAccountUserInput) {
+    async createAccountUser(@Arg("data") data: AccountUserInput) {
         const accountUser = new AccountUser();
         Object.assign(accountUser, data);
         await accountUser.save();
@@ -25,7 +24,7 @@ export class AccountUserResolver {
     }
 
     @Mutation(() => AccountUser)
-    async updateAccountUser(@Arg("id") id: string, @Arg("data") data: UpdateAccountUserInput) {
+    async updateAccountUser(@Arg("id") id: string, @Arg("data") data: AccountUserInput) {
         const accountUser = await AccountUser.findOne({ where: { id } });
         if (!accountUser) throw new Error("AccountUser not found!");
         Object.assign(accountUser, data);
