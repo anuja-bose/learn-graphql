@@ -1,7 +1,8 @@
 .sub-container{
   background-color: #ffffff;
   width: 90%;
-  height: 50%;
+  height: 70%;
+ overflow: scroll;
   border-radius: 15px;
 }
 .sub-container h3{
@@ -20,4 +21,10 @@
   font-size: 15px !important;
   margin-top: 40px !important;
   margin-left: 15px !important;
+}
+
+.data-container {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
 }

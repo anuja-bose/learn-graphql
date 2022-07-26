@@ -16,12 +16,14 @@ const AccountDataTable = ({ accounts }) => {
     console.log("accounts ",accounts);
 
     return (
+        <div className='data-container'>
         <DataTable
             columns={columns}
             data={accounts}
             pagination
             defaultSortFieldId={1} 
         />
+        </div>
     );
 }
 
