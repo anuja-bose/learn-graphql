@@ -63,3 +63,7 @@
 .form button[type=submit]:hover {
   background: #ff5e31;
 }
+
+.error{
+  color: #ff5e31;
+}

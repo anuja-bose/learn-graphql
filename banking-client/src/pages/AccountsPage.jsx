@@ -24,7 +24,7 @@ function AccountsPage() {
   });
 
   if (loading) return 'Submitting...';
-  if (error) return `Submission error! ${error.message}`;
+  if (error) return <p className='error'> Error while submitting the data : {error.message} </p>;
 
   return (
     <Container className='sub-container'>

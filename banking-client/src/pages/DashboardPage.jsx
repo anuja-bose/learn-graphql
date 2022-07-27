@@ -17,7 +17,7 @@ const AccountsPage = () => {
   const { loading, error, data } = useQuery(GET_ACCOUNT_USER);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p className='error'>Error : {error.message}</p>;
   return (
         <Container className='sub-container'>
           <div className="section-title">
