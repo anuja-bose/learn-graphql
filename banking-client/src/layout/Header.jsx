@@ -13,11 +13,19 @@ function Header() {
                 </h1>
                 <nav id="navbar" className="navbar">
                     <ul>
-                        <li> <Link to="/dashboard" className="nav-link scrollto"> Dashboard </Link></li>
-                        <li> <Link to="/accounts" className="nav-link scrollto"> Manage Accounts </Link></li>
-                        <li> <Link to="/transaction" className="nav-link scrollto"> Transaction </Link></li>
-                        <li> <Link to="/logout" className="getstarted scrollto"> Logout </Link> 
-                    </li>
+                        <li>
+                            <NavLink to="/dashboard" className="nav-link scrollto" activeClassName="active">
+                                Dashboard </NavLink></li>
+                        <li>
+                            <NavLink to="/accounts" className="nav-link scrollto" activeClassName="active"> 
+                            Manage Accounts </NavLink>
+                        </li>
+                        <li> 
+                        <NavLink to="/transaction" className="nav-link scrollto" activeClassName="active"> 
+                        Transaction </NavLink>
+                            </li>
+                        <li> <Link to="/logout" className="getstarted scrollto"> Logout </Link>
+                        </li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
