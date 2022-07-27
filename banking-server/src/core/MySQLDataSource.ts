@@ -1,7 +1,6 @@
 import { DataSource } from "typeorm";
 require('dotenv').config();
-console.log(' process.env.USER_ID;  ',process.env.DB_HOST);
-    
+
 export const MysqlDataSource = new DataSource({
     type: "mysql",
     host: process.env.DB_HOST,
