@@ -1,8 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import BankLogo from './../assets/images/banklogo.png';
 import { Link, NavLink } from "react-router-dom";
-import NavigationBar from "../components/shared/NavigationBar";
 function Header() {
     return (
         <header id="header" className="fixed-top ">
@@ -14,16 +13,16 @@ function Header() {
                 <nav id="navbar" className="navbar">
                     <ul>
                         <li>
-                            <NavLink to="/dashboard" className="nav-link scrollto" activeClassName="active">
+                            <NavLink to="/dashboard" className="nav-link scrollto" activeclassname="active">
                                 Dashboard </NavLink></li>
                         <li>
-                            <NavLink to="/accounts" className="nav-link scrollto" activeClassName="active"> 
-                            Manage Accounts </NavLink>
+                            <NavLink to="/accounts" className="nav-link scrollto" activeclassname="active">
+                                Manage Accounts </NavLink>
                         </li>
-                        <li> 
-                        <NavLink to="/transaction" className="nav-link scrollto" activeClassName="active"> 
-                        Transaction </NavLink>
-                            </li>
+                        <li>
+                            <NavLink to="/transaction" className="nav-link scrollto" activeclassname="active">
+                                Transaction </NavLink>
+                        </li>
                         <li> <Link to="/logout" className="getstarted scrollto"> Logout </Link>
                         </li>
                     </ul>
