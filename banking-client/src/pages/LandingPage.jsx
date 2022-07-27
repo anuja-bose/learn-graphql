@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class LandingPage extends Component {
   render() {
@@ -7,7 +8,8 @@ class LandingPage extends Component {
           <h1>Welcome</h1>
           <h2> Thanks for providing me this oppurtunity</h2>
           <div className="d-flex">
-            <a href="/dashboard" className="btn-get-started scrollto">Get Started</a>
+            
+            <Link to="/dashboard" className="btn-get-started scrollto"> Get Started </Link>
           </div>
        </>
     );

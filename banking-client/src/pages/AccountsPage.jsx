@@ -40,18 +40,18 @@ function AccountsPage() {
             <div className="col-md-6 form-group">
               <input ref={node => {
                 username = node;
-              }} type="text" class="form-control" placeholder="User Name" required />
+              }} type="text" className="form-control" placeholder="User Name" required />
             </div>
             <div className="col-md-6 form-group mt-3 mt-md-0">
               <input ref={node => {
                 fullname = node;
-              }} class="form-control" placeholder="Full name" required />
+              }} className="form-control" placeholder="Full name" required />
             </div>
           </div>
           <div className="form-group mt-3">
             <input ref={node => {
               accountNumber = node;
-            }} type="text" class="form-control" placeholder="Account Number" required />
+            }} type="text" className="form-control" placeholder="Account Number" required />
           </div>
          
          
