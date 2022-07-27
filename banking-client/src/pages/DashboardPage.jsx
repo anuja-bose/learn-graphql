@@ -7,6 +7,7 @@ const AccountsPage = () => {
   const GET_ACCOUNT_USER = gql`
   query Query {
     accountUser {
+      id
       fullname
       username
       accountNumber
