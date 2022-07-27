@@ -17,11 +17,7 @@ const ADD_ACCOUNT_USER = gql`
 
 function AccountsPage() {
   let fullname, accountNumber, username;
-  const [addAccount, { data, loading, error }] = useMutation(ADD_ACCOUNT_USER, {
-    variables: {
-      data: { fullname: "mytest", accountNumber: "3432423", username: "mytesting" }
-    }
-  });
+  const [addAccount, { data, loading, error }] = useMutation(ADD_ACCOUNT_USER);
 
   if (loading) return 'Submitting...';
   if (error) return <p className='error'> Error while submitting the data : {error.message} </p>;
