@@ -1,12 +1,39 @@
 import DataTable from 'react-data-table-component';
+import { gql, useMutation } from '@apollo/client';
+import Swal from 'sweetalert2'
+
+const DELETE_ACCOUNT_USER = gql`
+    mutation Mutation($deleteAccountUserId: String!) {
+        deleteAccountUser(id: $deleteAccountUserId)
+  }`;
 
 const AccountDataTable = ({ accounts }) => {
-
+    const [deleteAccount, { data, loading, error, refetch }] = useMutation(DELETE_ACCOUNT_USER);
     const handleEdit = (id) => {
         console.log("edit clicked id :" + id)
     };
     const handleDelete = (id) => {
-        console.log("delete clicked id :" + id)
+        console.log("delete clicked id :" + id);
+       
+       
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+            deleteAccount({ variables: { deleteAccountUserId: id } });
+              Swal.fire(
+                'Deleted!',
+                'Acccount has been deleted.',
+                'success'
+              )
+            }
+          })
     };
     const handleDebit = (id) => {
         console.log("Debit clicked id :" + id)
@@ -14,7 +41,7 @@ const AccountDataTable = ({ accounts }) => {
     const handleCredit = (id) => {
         console.log("Credit clicked id :" + id)
     };
-
+   
     const columns = [
         {
             name: 'Name',
