@@ -21,6 +21,9 @@ export class AccountUser extends BaseEntity {
   @Column()
   accountNumber: string;
 
+  @Field(() => Number)
+  @Column()
+  amount: Number;
 
 }
 

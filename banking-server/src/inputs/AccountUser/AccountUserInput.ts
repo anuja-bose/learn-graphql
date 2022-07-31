@@ -12,4 +12,6 @@ export class AccountUserInput {
   @Field({ nullable: true })
   accountNumber?: string;
 
+  @Field({ nullable: true, defaultValue : 0 })
+  amount?: Number;
 }
