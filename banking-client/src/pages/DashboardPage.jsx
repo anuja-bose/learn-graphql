@@ -11,6 +11,7 @@ const AccountsPage = () => {
       fullname
       username
       accountNumber
+      amount
     }
   }
 `;
@@ -25,7 +26,7 @@ const AccountsPage = () => {
             <h2>Dashboard</h2>
             <h3>Account Holder List</h3>
           </div>
-          <AccountDataTable accounts={data.accountUser}></AccountDataTable>
+          <AccountDataTable accounts={data.accountUser} GET_ACCOUNT_USER = {GET_ACCOUNT_USER}></AccountDataTable>
         </Container>
       
   )
